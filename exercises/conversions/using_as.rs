@@ -5,11 +5,13 @@
 // The goal is to make sure that the division does not fail to compile
 // and returns the proper type.
 
-// I AM NOT DONE
+
+use std::collections::btree_map::Values;
 
 fn average(values: &[f64]) -> f64 {
     let total = values.iter().sum::<f64>();
-    total / values.len()
+    let len = values.len() as f64;
+    total / len
 }
 
 fn main() {
